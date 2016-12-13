@@ -1,0 +1,14 @@
+{
+  "name": "foinni",
+  "version": "1.0.0",
+  "description": "Лендинг из полезной рассылки HTML Academy №29",
+  "author": "Roman Stepanov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stepanov-roman/foinni.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stepanov-roman/foinni/issues"
+  },
+  "homepage": "https://github.com/stepanov-roman/foinni#readme"
+}
