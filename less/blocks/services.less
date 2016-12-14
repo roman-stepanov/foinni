@@ -1,0 +1,114 @@
+.services__desc {
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 0 28px 0;
+  width: 895px;
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1170px;
+}
+
+.services__item {
+  border: 1px solid @cl-brd__services;
+  width: 325px;
+  height: 162px;
+  margin: 48px 0 0 0;
+  padding: 71px 15px 15px 15px;
+
+  &:hover {
+    border-color: @cl-fnt__main-nav--hvr;
+
+    & .services__item-title {
+      color: @cl-fnt__main-nav--hvr;
+
+      &--development::before {
+        background-position: -278px -5px;
+      }
+
+      &--responsive::before {
+        background-position: -388px -5px;
+      }
+
+      &--clean::before {
+        background-position: -601px -5px;
+      }
+
+      &--graphic::before {
+        background-position: -494px 1px;
+      }
+
+      &--photography::before {
+        background-position: -165px -1px;
+      }
+
+      &--editing::before {
+        background-position: -60px -4px;
+      }
+    }
+
+    & .services__item-desc {
+      color: @cl-fnt__title;
+    }
+  }
+}
+
+.services__item-title {
+  position: relative;
+  color: @cl-fnt__title;
+  font-family: "Roboto Medium", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -41px;
+    left: 144px;
+    width: 40px;
+    height: 40px;
+    background: url("../img/icons.png") no-repeat;
+    background-position: 0px 0px;
+  }
+
+  &--development::before {
+    background-position: -218px -5px;
+  }
+
+  &--responsive::before {
+    background-position: -338px -5px;
+  }
+
+  &--clean::before {
+    background-position: -549px -5px;
+  }
+
+  &--graphic::before {
+    background-position: -438px 1px;
+  }
+
+  &--photography::before {
+    background-position: -113px -1px;
+  }
+
+  &--editing::before {
+    background-position: -8px -4px;
+  }
+}
+
+.services__item-desc {
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
