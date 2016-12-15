@@ -1,17 +1,25 @@
 .btn {
   display: block;
-  color: @cl-bg__body;
   font-size: 18px;
   line-height: 36px;
   text-decoration: none;
   text-align: center;
   margin: 0;
-  padding: 15px;
-  background-color: @cl-fnt__main-nav--hvr;
+  padding: 0 0 0 0;
+  border: 1px solid #9c9a97;
 
   &--our-works {
+    color: @cl-bg__body;
     width: 165px;
-    height: 20px;
+    // height: 50px;
     margin: 45px auto 0 auto;
+    border-width: 0;
+    background-color: @cl-fnt__main-nav--hvr;
+  }
+
+  &--pricing {
+    font-size: 14px;
+    width: 100px;
+    margin: 30px auto 0 auto;
   }
 }
