@@ -76,6 +76,18 @@ module.exports = function(grunt) {
       }
     },
 
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          src: ["build/img/**/*.{png,jpg,gif}"]
+        }]
+      }
+    },
+
     copy: {
       build: {
         files: [{
@@ -114,7 +126,8 @@ module.exports = function(grunt) {
     "copy",
     "less",
     "postcss",
-    "csso"
+    "csso",
+    "imagemin"
   ]);
 
 };
