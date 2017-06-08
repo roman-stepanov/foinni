@@ -26,11 +26,20 @@ module.exports = function(grunt) {
           dest: 'build/css/'
         }]
       }
+    },
+
+    less: {
+      build: {
+        files: {
+          'build/css/style.css': 'less/style.less'
+        }
+      }
     }
   });
 
   grunt.registerTask('build', [
     'clean',
-    'copy'
+    'copy',
+    'less'
   ]);
 }
