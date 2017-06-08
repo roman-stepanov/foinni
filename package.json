@@ -1,6 +1,6 @@
 {
   "name": "foinni",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Лендинг из полезной рассылки HTML Academy №29",
   "author": "Roman Stepanov",
   "repository": {
@@ -10,23 +10,5 @@
   "bugs": {
     "url": "https://github.com/stepanov-roman/foinni/issues"
   },
-  "homepage": "https://github.com/stepanov-roman/foinni#readme",
-  "devDependencies": {
-    "autoprefixer": "^6.5.4",
-    "css-mqpacker": "^5.0.1",
-    "grunt": "^1.0.1",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-contrib-clean": "^1.0.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-imagemin": "^1.0.1",
-    "grunt-contrib-less": "^1.4.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-csso": "^2.1.0",
-    "grunt-postcss": "^0.8.0",
-    "load-grunt-tasks": "^3.5.2"
-  },
-  "scripts": {
-    "build": "grunt build",
-    "start": "npm run build && grunt serve"
-  }
+  "homepage": "https://github.com/stepanov-roman/foinni#readme"
 }
