@@ -13,7 +13,9 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: [
-            '*.html'
+            '*.html',
+            'img/**/*.{jpg,png}',
+            'fonts/**.{woff,woff2}'
           ],
           dest: 'build'
         }]
