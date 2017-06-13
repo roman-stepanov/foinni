@@ -1,21 +1,38 @@
 .btn {
   display: inline-block;
+  color: @clr_darkgray;
   font-family: @fnt_Roboto;
   font-style: normal;
   font-weight: 100;
+  line-height: 36px;
   text-align: center;
   text-decoration: none;
+  border: 1px solid @clr_gray;
+  background-color: @clr_lightyellow;
+
+  &:hover {
+    color: @clr_lightyellow;
+    border-color: @clr_green;
+    background-color: @clr_green;
+  }
 
   &--green {
     color: @clr_lightyellow;
+    border-color: @clr_green;
     background-color: @clr_green;
   }
 
   &--big-size {
     font-size: 18px;
-    line-height: 36px;
     margin: 0;
-    padding: 9px 0px 5px 0px;
-    width: 195px;
+    padding: 8px 0px 4px 0px;
+    width: 193px;
+  }
+
+  &--small-size {
+    font-size: 14px;
+    margin: 0;
+    padding: 2px 0px 0px 0px;
+    width: 98px;
   }
 }
