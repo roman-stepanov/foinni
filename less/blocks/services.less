@@ -1,15 +1,5 @@
-.services {
-
-}
-
-.services__container {
-  margin: 0 auto;
-  padding: 120px 0px 0px 0px;
-  width: 924px;
-}
-
 .services__desc {
-  color: #8f8e91;
+  color: @clr_gray;
   font-family: @fnt_Roboto;
   font-size: 18px;
   font-style: normal;
@@ -32,17 +22,17 @@
 .services__item {
   margin: 0px 0px 12px 0px;
   padding: 30px 10px 20px 10px;
-  border: 2px solid #cac8c5;
-  width: 276px;
+  border: 1px solid @clr_gray;
+  width: 278px;
 
   &:hover {
-    border-color: #1dde85;
+    border-color: @clr_green;
   }
 }
 
 .services__item-title {
   position: relative;
-  color: #454546;
+  color: @clr_darkgray;
   font-family: @fnt_Roboto;
   font-size: 24px;
   font-style: normal;
@@ -90,7 +80,7 @@
 }
 
 .services__item:hover .services__item-title {
-  color: #1dde85;
+  color: @clr_green;
 
   &--development::before {
     background-position: -55px -5px;
@@ -118,7 +108,7 @@
 }
 
 .services__item-desc {
-  color: #8f8e91;
+  color: @clr_gray;
   font-family: @fnt_Roboto;
   font-size: 14px;
   font-style: normal;

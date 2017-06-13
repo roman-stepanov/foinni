@@ -1,5 +1,5 @@
 .main-nav {
-  // background-color: lightgray;
+
 }
 
 .main-nav__toggle {
@@ -16,14 +16,14 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 450px;
+  width: 500px;
 }
 
 .main-nav__item {
 
   & a {
     display: block;
-    color: #fffcf4;
+    color: @clr_lightyellow;
     font-family: @fnt_Roboto;
     font-size: 14px;
     font-style: normal;
@@ -35,15 +35,15 @@
     padding: 0;
 
     &:hover {
-      color: #1dde85;
+      color: @clr_green;
     }
   }
 
   &--active {
-    border-bottom: 1px solid #1dde85;
+    border-bottom: 1px solid @clr_green;
   }
 
   &--active a {
-    color: #1dde85;
+    color: @clr_green;
   }
 }
