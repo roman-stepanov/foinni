@@ -1,0 +1,110 @@
+.team__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 70px 0px 0px 0px;
+}
+
+.team__item {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 269px;
+  background-color: @clr_green;
+
+  & figure {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.team__img {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.team__item:hover .team__img {
+  opacity: 0.1;
+}
+
+.team__img-caption {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(69, 69, 70, 0.9);
+}
+
+.team__item:hover .team__img-caption {
+  display: none;
+}
+
+.team__name {
+  color: @clr_lightyellow;
+  font-family: @fnt_Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.team__position {
+  display: block;
+  color: @clr_lightyellow;
+  font-family: @fnt_Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 36px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.team__social {
+  display: none;
+  position: absolute;
+  right: 0px;
+  bottom: 30px;
+  left: 0px;
+  font-size: 0px;
+  text-align: center;
+  margin: 0;
+  padding: 3px 0px 3px 0px;
+  border: 1px solid @clr_white;
+  border-right-width: 0;
+  border-left-width: 0;
+}
+
+.team__item:hover .team__social {
+  display: block;
+}
+
+.team__social-link {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0px 5px 0px 0px;
+  padding: 0;
+  background-image: url("../img/icons-socials.png");
+  background-repeat: no-repeat;
+
+  &--behance {
+    background-position: -5px -5px;
+  }
+
+  &--facebook {
+    background-position: -45px -5px;
+  }
+
+  &--twitter {
+    background-position: -85px -5px;
+  }
+}
