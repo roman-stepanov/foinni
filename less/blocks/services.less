@@ -1,0 +1,130 @@
+.services {
+
+}
+
+.services__container {
+  margin: 0 auto;
+  padding: 120px 0px 0px 0px;
+  width: 924px;
+}
+
+.services__desc {
+  color: #8f8e91;
+  font-family: @fnt_Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 44px 0px 79px 0px;
+}
+
+.services__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.services__item {
+  margin: 0px 0px 12px 0px;
+  padding: 30px 10px 20px 10px;
+  border: 2px solid #cac8c5;
+  width: 276px;
+
+  &:hover {
+    border-color: #1dde85;
+  }
+}
+
+.services__item-title {
+  position: relative;
+  color: #454546;
+  font-family: @fnt_Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 45px;
+  text-align: center;
+  margin: 0;
+  padding: 45px 0px 0px 0px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 115px;
+    width: 40px;
+    height: 40px;
+
+    background-image: url("../img/icons-services.png");
+    background-repeat: no-repeat;
+  }
+
+  &--development::before {
+    background-position: -5px -5px;
+  }
+
+  &--responsive::before {
+    background-position: -105px -5px;
+  }
+
+  &--clean-design::before {
+    background-position: -205px -5px;
+  }
+
+  &--graphic-design::before {
+    background-position: -305px -5px;
+  }
+
+  &--photography::before {
+    background-position: -405px -5px;
+  }
+
+  &--photo-editing::before {
+    background-position: -505px -5px;
+  }
+}
+
+.services__item:hover .services__item-title {
+  color: #1dde85;
+
+  &--development::before {
+    background-position: -55px -5px;
+  }
+
+  &--responsive::before {
+    background-position: -155px -5px;
+  }
+
+  &--clean-design::before {
+    background-position: -255px -5px;
+  }
+
+  &--graphic-design::before {
+    background-position: -355px -5px;
+  }
+
+  &--photography::before {
+    background-position: -455px -5px;
+  }
+
+  &--photo-editing::before {
+    background-position: -555px -5px;
+  }
+}
+
+.services__item-desc {
+  color: #8f8e91;
+  font-family: @fnt_Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
