@@ -15,7 +15,8 @@ module.exports = function(grunt) {
           src: [
             '*.html',
             'img/**/*.{jpg,png}',
-            'fonts/**.{woff,woff2}'
+            'fonts/**.{woff,woff2}',
+            'js/**.js'
           ],
           dest: 'build'
         }]
@@ -26,6 +27,17 @@ module.exports = function(grunt) {
           cwd: 'node_modules/normalize.css/',
           src: ['normalize.css'],
           dest: 'build/css/'
+        }]
+      },
+      jquery: {
+        files: [{
+          expand: true,
+          cwd: 'node_modules/jquery/dist/',
+          src: [
+            'jquery.min.js',
+            'jquery.min.map'
+          ],
+          dest: 'build/js/'
         }]
       }
     },
