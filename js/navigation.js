@@ -1,32 +1,35 @@
 'use strict';
 
 jQuery(document).ready(function($){
-  var navigation = $('.main-nav');
-  var contentSections = $('.content-section');
+  var pageHeader = $('.page-header');
+  var mainNavigation = $('.main-nav');
+  var footerNavigation = $('.page-footer__list-links--page-nav');
 
-  var updateNavigation = function() {
-    contentSections.each(function(){
-      var actual = $(this);
-      var actualHeight = actual.height() + parseInt(actual.css('paddingTop').replace('px', '')) + parseInt(actual.css('paddingBottom').replace('px', ''));
-      var actualAnchor = navigation.find('a[href="#' + actual.attr('id') + '"]');
+  var updateMainNavigation = function() {
+    mainNavigation.find('a').each(function() {
+      var link = $(this);
+      var target = $(this.hash);
+      var scrollTop = $(window).scrollTop();
 
-      if (( actual.offset().top <= $(window).scrollTop() ) && ( actual.offset().top + actualHeight > $(window).scrollTop() )) {
-        actualAnchor.parent().addClass('main-nav__item--active');
+      if ((target.offset().top - pageHeader.outerHeight() <= scrollTop) && (target.offset().top + target.outerHeight() - pageHeader.outerHeight() > scrollTop)) {
+        link.parent().addClass('main-nav__item--active');
       } else {
-        actualAnchor.parent().removeClass('main-nav__item--active');
+        link.parent().removeClass('main-nav__item--active');
       }
     });
   };
 
-  $(window).on('scroll', function(){
-    updateNavigation();
-  });
-
-  navigation.find('a').on('click', function(evt) {
+  var onClickNavigation = function(evt) {
     evt.preventDefault();
     var target = $(this.hash);
-    $('body,html').animate(
-      {'scrollTop': target.offset().top}, 400
-    );
+    $('body, html').animate({'scrollTop': target.offset().top - pageHeader.outerHeight() + 2}, 600);
+    window.location.hash = this.hash;
+  };
+
+  $(window).on('scroll', function(){
+    updateMainNavigation();
   });
+
+  mainNavigation.find('a').on('click', onClickNavigation);
+  footerNavigation.find('a').on('click', onClickNavigation);
 });
