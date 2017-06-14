@@ -78,6 +78,18 @@ module.exports = function(grunt) {
           'build/css/style.min.css': 'build/css/style.css'
         }
       }
+    },
+
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          src: ['build/img/**/*.{png,jpg}']
+        }]
+      }
     }
   });
 
@@ -86,6 +98,7 @@ module.exports = function(grunt) {
     'copy',
     'less',
     'postcss',
-    'csso'
+    'csso',
+    'imagemin'
   ]);
 }
