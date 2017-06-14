@@ -17,10 +17,25 @@
     background-color: @clr_green;
   }
 
+  &:active {
+    border-color: @clr_darkgray;
+    background-color: @clr_darkgray;
+  }
+
   &--green {
     color: @clr_lightyellow;
     border-color: @clr_green;
     background-color: @clr_green;
+
+    &:hover {
+      border-color: @clr_gray;
+      background-color: @clr_gray;
+    }
+
+    &:active {
+      border-color: @clr_darkgray;
+      background-color: @clr_darkgray;
+    }
   }
 
   &--big-size {
@@ -28,6 +43,13 @@
     margin: 0;
     padding: 8px 0px 4px 0px;
     width: 193px;
+  }
+
+  &--middle-size {
+    font-size: 16px;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    width: 103px;
   }
 
   &--small-size {
