@@ -48,12 +48,32 @@ module.exports = function(grunt) {
           'build/css/style.css': 'less/style.less'
         }
       }
+    },
+
+    postcss: {
+      style: {
+        options: {
+          processors: [
+            require('autoprefixer')({
+              browsers: [
+                'last 1 version',
+                'last 2 Chrome versions',
+                'last 2 Firefox versions',
+                'last 2 Opera versions',
+                'last 2 Edge versions'
+              ]
+            })
+          ]
+        },
+        src: 'build/css/style.css'
+      }
     }
   });
 
   grunt.registerTask('build', [
     'clean',
     'copy',
-    'less'
+    'less',
+    'postcss'
   ]);
 }
