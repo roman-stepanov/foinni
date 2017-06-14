@@ -1,0 +1,49 @@
+.main-nav {
+
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav__wrapper {
+
+}
+
+.main-nav__items {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+}
+
+.main-nav__item {
+
+  & a {
+    display: block;
+    color: @clr_lightyellow;
+    font-family: @fnt_Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+      color: @clr_green;
+    }
+  }
+
+  &--active {
+    border-bottom: 1px solid @clr_green;
+  }
+
+  &--active a {
+    color: @clr_green;
+  }
+}

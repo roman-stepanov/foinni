@@ -1,0 +1,90 @@
+.pricing__wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 41px 0px 0px 0px;
+}
+
+.pricing__item {
+  margin: 0;
+  padding: 0;
+  width: 268px;
+}
+
+.pricing__item-title {
+  color: @clr_gray;
+  font-family: @fnt_Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 36px;
+  text-align: center;
+  margin: 0;
+  padding: 0px 0px 18px 0px;
+}
+
+.pricing__item:hover .pricing__item-title {
+  color: @clr_green;
+}
+
+.pricing__cy {
+  color: @clr_darkgray;
+  font-family: @fnt_RobotoSlab;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  margin: 0;
+  padding: 27px 0px 25px 0px;
+  border: 1px solid @clr_gray;
+
+  & sup {
+    font-size: 24px;
+  }
+
+  & sub {
+    font-size: 18px;
+    font-weight: 100;
+  }
+}
+
+.pricing__item:hover .pricing__cy {
+  color: @clr_lightyellow;
+  border-color: @clr_green;
+  background-color: @clr_green;
+}
+
+.pricing__detail {
+  margin: 0;
+  padding: 22px 0px 22px 0px;
+  border: 1px solid transparent;
+}
+
+.pricing__item:hover .pricing__detail {
+  border-color: @clr_green;
+}
+
+.pricing__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & li {
+    color: @clr_gray;
+    font-family: @fnt_Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 36px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.pricing__btn-wrapper {
+  text-align: center;
+  margin: 36px 0px 0px 0px;
+  padding: 0;
+}
