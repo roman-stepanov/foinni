@@ -48,12 +48,57 @@ module.exports = function(grunt) {
           'build/css/style.css': 'less/style.less'
         }
       }
+    },
+
+    postcss: {
+      style: {
+        options: {
+          processors: [
+            require('autoprefixer')({
+              browsers: [
+                'last 1 version',
+                'last 2 Chrome versions',
+                'last 2 Firefox versions',
+                'last 2 Opera versions',
+                'last 2 Edge versions'
+              ]
+            })
+          ]
+        },
+        src: 'build/css/style.css'
+      }
+    },
+
+    csso: {
+      style: {
+        options: {
+          report: 'gzip'
+        },
+        files: {
+          'build/css/style.min.css': 'build/css/style.css'
+        }
+      }
+    },
+
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          src: ['build/img/**/*.{png,jpg}']
+        }]
+      }
     }
   });
 
   grunt.registerTask('build', [
     'clean',
     'copy',
-    'less'
+    'less',
+    'postcss',
+    'csso',
+    'imagemin'
   ]);
 }
