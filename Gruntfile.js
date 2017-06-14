@@ -67,6 +67,17 @@ module.exports = function(grunt) {
         },
         src: 'build/css/style.css'
       }
+    },
+
+    csso: {
+      style: {
+        options: {
+          report: 'gzip'
+        },
+        files: {
+          'build/css/style.min.css': 'build/css/style.css'
+        }
+      }
     }
   });
 
@@ -74,6 +85,7 @@ module.exports = function(grunt) {
     'clean',
     'copy',
     'less',
-    'postcss'
+    'postcss',
+    'csso'
   ]);
 }
