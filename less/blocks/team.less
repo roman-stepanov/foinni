@@ -11,7 +11,6 @@
   margin: 0px 0px 18px 0px;
   padding: 0;
   width: 269px;
-  background-color: @clr_green;
 
   & figure {
     margin: 0;
@@ -25,10 +24,6 @@
   padding: 0;
 }
 
-.team__item:hover .team__img {
-  opacity: 0.1;
-}
-
 .team__img-caption {
   position: absolute;
   right: 0px;
@@ -37,10 +32,14 @@
   margin: 0;
   padding: 0;
   background-color: rgba(69, 69, 70, 0.9);
-}
+  opacity: 1;
+  transition: opacity 0.7s, visibility 0s;
 
-.team__item:hover .team__img-caption {
-  display: none;
+  .team__item:hover & {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s, visibility 0s 0.7s;
+  }
 }
 
 .team__name {
@@ -68,11 +67,28 @@
   padding: 0;
 }
 
+.team__item-cover {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  background-color: @clr_green;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.7s, visibility 0s 0.7s;
+
+  .team__item:hover & {
+    opacity: 0.9;
+    visibility: visible;
+    transition: opacity 0.7s, visibility 0s;
+  }
+}
+
 .team__social {
-  display: none;
   position: absolute;
   right: 0px;
-  bottom: 30px;
+  bottom: 50px;
   left: 0px;
   font-size: 0px;
   text-align: center;
@@ -81,10 +97,6 @@
   border: 1px solid @clr_white;
   border-right-width: 0;
   border-left-width: 0;
-}
-
-.team__item:hover .team__social {
-  display: block;
 }
 
 .team__social-link {
