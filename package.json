@@ -12,7 +12,8 @@
   },
   "homepage": "https://github.com/stepanov-roman/foinni#readme",
   "scripts": {
-    "build": "grunt build"
+    "build": "grunt build",
+    "start": "grunt build && grunt serve"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.1",

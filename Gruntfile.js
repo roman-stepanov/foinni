@@ -9,16 +9,11 @@ module.exports = function(grunt) {
     },
 
     copy: {
-      build: {
+      html: {
         files: [{
           expand: true,
-          src: [
-            '*.html',
-            'img/**/*.{jpg,png}',
-            'fonts/**.{woff,woff2}',
-            'js/**.js'
-          ],
-          dest: 'build'
+          src: '*.html',
+          dest: 'build/'
         }]
       },
       normalize: {
@@ -27,6 +22,16 @@ module.exports = function(grunt) {
           cwd: 'node_modules/normalize.css/',
           src: ['normalize.css'],
           dest: 'build/css/'
+        }]
+      },
+      resources: {
+        files: [{
+          expand: true,
+          src: [
+            'fonts/**.{woff,woff2}',
+            'img/**/*.{jpg,png}'
+          ],
+          dest: 'build/'
         }]
       },
       jquery: {
@@ -38,6 +43,13 @@ module.exports = function(grunt) {
             'jquery.min.map'
           ],
           dest: 'build/js/'
+        }]
+      },
+      js: {
+        files: [{
+          expand: true,
+          src: 'js/**/*.js',
+          dest: 'build/'
         }]
       }
     },
@@ -90,6 +102,47 @@ module.exports = function(grunt) {
           src: ['build/img/**/*.{png,jpg}']
         }]
       }
+    },
+
+    browserSync: {
+      build: {
+        bsFiles: {
+          src: [
+            'build/*.html',
+            'build/css/*.css',
+            'build/js/**/*.js'
+          ]
+        },
+        options: {
+          server: 'build/',
+          watchTask: true,
+          notify: false,
+          open: true,
+          ui: false
+        }
+      }
+    },
+
+    watch: {
+      html: {
+        files: '*.html',
+        tasks: 'copy:html'
+      },
+      style: {
+        files: 'less/**/*.less',
+        tasks: [
+          'less',
+          'postcss',
+          'csso'
+        ],
+        options: {
+          spawn: false
+        }
+      },
+      js: {
+        files: 'js/**/*.js',
+        tasks: 'copy:js'
+      }
     }
   });
 
@@ -100,5 +153,10 @@ module.exports = function(grunt) {
     'postcss',
     'csso',
     'imagemin'
+  ]);
+
+  grunt.registerTask('serve', [
+    'browserSync',
+    'watch'
   ]);
 }
