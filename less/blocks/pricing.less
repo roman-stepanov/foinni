@@ -21,10 +21,11 @@
   text-align: center;
   margin: 0;
   padding: 0px 0px 18px 0px;
-}
+  transition: color 0.7s;
 
-.pricing__item:hover .pricing__item-title {
-  color: @clr_green;
+  .pricing__item:hover & {
+    color: @clr_green;
+  }
 }
 
 .pricing__cy {
@@ -38,6 +39,7 @@
   margin: 0;
   padding: 27px 0px 25px 0px;
   border: 1px solid @clr_gray;
+  transition: color 0.7s, border-color 0.7s, background-color 0.7s;
 
   & sup {
     font-size: 24px;
@@ -47,22 +49,23 @@
     font-size: 18px;
     font-weight: 100;
   }
-}
 
-.pricing__item:hover .pricing__cy {
-  color: @clr_lightyellow;
-  border-color: @clr_green;
-  background-color: @clr_green;
+  .pricing__item:hover & {
+    color: @clr_lightyellow;
+    border-color: @clr_green;
+    background-color: @clr_green;
+  }
 }
 
 .pricing__detail {
   margin: 0;
   padding: 22px 0px 22px 0px;
   border: 1px solid transparent;
-}
+  transition: border-color 0.7s;
 
-.pricing__item:hover .pricing__detail {
-  border-color: @clr_green;
+  .pricing__item:hover & {
+    border-color: @clr_green;
+  }
 }
 
 .pricing__features {

@@ -33,6 +33,7 @@
     text-transform: uppercase;
     margin: 0;
     padding: 0;
+    transition: color 0.7s;
 
     &:hover {
       color: @clr_green;
@@ -41,9 +42,10 @@
 
   &--active {
     border-bottom: 1px solid @clr_green;
-  }
+    transition: border-color 0.7s;
 
-  &--active a {
-    color: @clr_green;
+    & a {
+      color: @clr_green;
+    }
   }
 }

@@ -24,6 +24,7 @@
   padding: 30px 15px 22px 15px;
   border: 1px solid @clr_gray;
   width: 326px;
+  transition: border-color 0.5s;
 
   &:hover {
     border-color: @clr_green;
@@ -41,6 +42,7 @@
   text-align: center;
   margin: 0;
   padding: 41px 0px 0px 0px;
+  transition: color 0.5s;
 
   &::before {
     content: "";
@@ -77,33 +79,33 @@
   &--photo-editing::before {
     background-position: -505px -5px;
   }
-}
 
-.services__item:hover .services__item-title {
-  color: @clr_green;
+  .services__item:hover & {
+    color: @clr_green;
 
-  &--development::before {
-    background-position: -55px -5px;
-  }
+    &--development::before {
+      background-position: -55px -5px;
+    }
 
-  &--responsive::before {
-    background-position: -155px -5px;
-  }
+    &--responsive::before {
+      background-position: -155px -5px;
+    }
 
-  &--clean-design::before {
-    background-position: -255px -5px;
-  }
+    &--clean-design::before {
+      background-position: -255px -5px;
+    }
 
-  &--graphic-design::before {
-    background-position: -355px -5px;
-  }
+    &--graphic-design::before {
+      background-position: -355px -5px;
+    }
 
-  &--photography::before {
-    background-position: -455px -5px;
-  }
+    &--photography::before {
+      background-position: -455px -5px;
+    }
 
-  &--photo-editing::before {
-    background-position: -555px -5px;
+    &--photo-editing::before {
+      background-position: -555px -5px;
+    }
   }
 }
 
